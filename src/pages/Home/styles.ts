@@ -5,7 +5,7 @@ export const Content = styled.main`
   margin: 10rem auto;
 
   text-align: center;
-  color: #222E50;
+  color: var(--color-primary);
 
   padding: 0 1.6rem;
 `
@@ -33,16 +33,16 @@ export const Input = styled.input`
   width: 100%;
   border: 0;
   padding: 1rem 1rem 1.4rem;
-  border-bottom: 1px solid #222E50;
+  border-bottom: 1px solid var(--color-primary);
 
   outline: none;
 
   font-size: 1.8rem;
 
-  color: #222E50;
+  color: var(--color-primary);
   letter-spacing: .4rem;
 
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: 0 .2rem .5rem rgba(0,0,0, .2);
 
   &::placeholder {
