@@ -12,18 +12,13 @@ export const Content = styled.main`
 
 export const Title = styled.h2`
   font-size: 4.8rem;
-  margin-bottom: 2.4rem;
 `
 
 export const SubTitle = styled.h3`
   font-size: 1.8rem;
-  margin-bottom: 5.2rem;
-`
+  `
 export const Form = styled.form`
-  display: flex;
-
-  width: 70%;
-  margin: 0 auto;
+  margin-top: 8rem;
 `
 
 export const Label = styled.label`
@@ -43,7 +38,6 @@ export const Input = styled.input`
   letter-spacing: .4rem;
 
   background-color: var(--color-white);
-  box-shadow: 0 .2rem .5rem rgba(0,0,0, .2);
 
   &::placeholder {
     color: inherit;
@@ -56,10 +50,12 @@ export const Input = styled.input`
 `
 
 export const FormGroup = styled.div`
-  width: 100%;
-
+  max-width: 80rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
+  gap: 1.6rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.4rem;
 `
