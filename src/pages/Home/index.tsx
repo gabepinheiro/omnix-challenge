@@ -12,7 +12,10 @@ export function Home () {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    history.push('/ofertas')
+    const target = e.target as HTMLFormElement
+    const inputCEP = target.elements.namedItem('cep') as HTMLInputElement
+
+    history.push(`/ofertas/${inputCEP.value}`)
   }
 
   return (
@@ -26,7 +29,7 @@ export function Home () {
             <S.Label htmlFor='cep' aria-label='Digite seu CEP' title='Digite seu CEP'>
               <SearchIcon size={32} />
             </S.Label>
-            <S.Input id='cep' type='text' title='Digite seu CEP' placeholder='Digite seu CEP' />
+            <S.Input id='cep' name='cep' type='text' title='Digite seu CEP' placeholder='Digite seu CEP' />
           </S.FormGroup>
 
           <Button
