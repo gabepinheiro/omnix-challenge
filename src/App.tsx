@@ -1,10 +1,20 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
+
 import { Home } from 'pages/Home'
+import { Offers } from 'pages/Offers'
 
 function App () {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/ofertas' component={Offers} />
+      </Switch>
+    </Router>
   )
 }
 
