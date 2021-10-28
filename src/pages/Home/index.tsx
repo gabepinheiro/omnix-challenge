@@ -1,4 +1,3 @@
-import { Header } from 'layout/Header'
 import { SearchOutline as SearchIcon } from '@styled-icons/evaicons-outline'
 
 import * as S from './styles'
@@ -17,7 +16,6 @@ export function Home () {
 
   return (
     <>
-      <Header />
       <S.Content>
         <S.Title>Seja bem vindo a OmnixFiber</S.Title>
         <S.SubTitle>Informe seu CEP para a gente separar ofertas especiais para o seu endereço!</S.SubTitle>
