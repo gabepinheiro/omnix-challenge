@@ -2,6 +2,7 @@ import { Header } from 'layout/Header'
 import { SearchOutline as SearchIcon } from '@styled-icons/evaicons-outline'
 
 import * as S from './styles'
+import { Button } from 'ui/Button'
 
 export function Home () {
   return (
@@ -18,6 +19,8 @@ export function Home () {
             </S.Label>
             <S.Input id='cep' type='text' title='Digite seu CEP' placeholder='Digite seu CEP' />
           </S.FormGroup>
+
+          <Button size='large' color='primary' title='Consultar o CEP'>Consultar</Button>
         </S.Form>
       </S.Content>
     </>
