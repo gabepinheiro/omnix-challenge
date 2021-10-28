@@ -1,13 +1,10 @@
 import styled from 'styled-components/macro'
 
-export const Content = styled.main`
-  max-width: 120rem;
-  margin: 10rem auto;
+export const Wrapper = styled.main`
+  margin-top: 10rem;
 
   text-align: center;
   color: var(--color-primary);
-
-  padding: 0 1.6rem;
 `
 
 export const Title = styled.h2`

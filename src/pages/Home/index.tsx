@@ -2,6 +2,7 @@ import { SearchOutline as SearchIcon } from '@styled-icons/evaicons-outline'
 
 import * as S from './styles'
 import { Button } from 'ui/Button'
+import { Container } from 'ui/Container'
 import { useHistory } from 'react-router'
 import { FormEvent } from 'react'
 
@@ -15,8 +16,8 @@ export function Home () {
   }
 
   return (
-    <>
-      <S.Content>
+    <S.Wrapper>
+      <Container>
         <S.Title>Seja bem vindo a OmnixFiber</S.Title>
         <S.SubTitle>Informe seu CEP para a gente separar ofertas especiais para o seu endereço!</S.SubTitle>
 
@@ -37,7 +38,7 @@ export function Home () {
             Consultar
           </Button>
         </S.Form>
-      </S.Content>
-    </>
+      </Container>
+    </S.Wrapper>
   )
 }
