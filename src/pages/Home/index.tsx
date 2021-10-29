@@ -22,14 +22,23 @@ export function Home () {
     <S.Wrapper>
       <Container>
         <S.Title>Seja bem vindo a OmnixFiber</S.Title>
-        <S.SubTitle>Informe seu CEP para a gente separar ofertas especiais para o seu endereço!</S.SubTitle>
+        <S.SubTitle>
+          Informe seu CEP para a gente separar ofertas especiais para o seu endereço!
+        </S.SubTitle>
 
         <S.Form onSubmit={handleSubmit}>
           <S.FormGroup>
             <S.Label htmlFor='cep' aria-label='Digite seu CEP' title='Digite seu CEP'>
               <SearchIcon size={32} />
             </S.Label>
-            <S.Input id='cep' name='cep' type='text' title='Digite seu CEP' placeholder='Digite seu CEP' />
+            <S.Input
+              id='cep'
+              name='cep'
+              type='text'
+              title='Digite seu CEP'
+              placeholder='Digite seu CEP'
+              required
+            />
           </S.FormGroup>
 
           <Button
