@@ -1,8 +1,16 @@
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 
-export const Wrapper = styled.figure`
+type WrapperProps = {
+  selected: boolean
+}
+
+export const Wrapper = styled.figure<WrapperProps>`
   background-color: var(--color-white);
-  border: 1px solid #ddd;
+  border: 1px solid ${({ selected }) =>
+     selected
+     ? css`var(--color-primary);`
+     : css`#ddd;`};
+
   border-radius: 10px;
   color: var(--color-primary);
   text-align: center;
@@ -25,6 +33,10 @@ export const Wrapper = styled.figure`
   }
 `
 export const Title = styled.h2`
+  font-size: 1.8rem;
+`
+
+export const Velocity = styled.h3`
   font-size: 2.4rem;
   font-weight: 300;
 `

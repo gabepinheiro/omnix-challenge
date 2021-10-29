@@ -1,0 +1,28 @@
+{
+  "userData": {
+    "zipcode": "",
+    "offers": [
+      {
+        "name": "Oferta 1",
+        "price": 5099,
+        "velocity": 200,
+        "id": 1,
+        "isSelected": false
+      },
+      {
+        "name": "Oferta 2",
+        "price": 10099,
+        "velocity": 300,
+        "id": 2,
+        "isSelected": false
+      },
+      {
+        "name": "Oferta 3",
+        "price": 15099,
+        "velocity": 600,
+        "id": 3,
+        "isSelected": false
+      }
+    ]
+  }
+}

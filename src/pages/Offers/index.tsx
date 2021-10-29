@@ -1,21 +1,28 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, MouseEvent } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import { Container } from 'ui/Container'
 import { Button } from 'ui/Button'
-import { CardOffer } from './CardOffer'
+import { CardOffer, OfferProps } from './CardOffer'
 
 import * as S from './styles'
 
-import { offersMock } from './mock'
+// import { offersMock } from './mock'
+import { userData } from 'resources/data.json'
+
 import { CEPProps, getCEP } from 'services/via-cep-api'
 
 export function Offers () {
+  const [offers, setOffers] = useState<Omit<OfferProps, 'onSelected'>[]>()
   const [cep, setCep] = useState<CEPProps>()
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(true)
 
   const history = useHistory()
   const { cep: cepNumber } = useParams<{ cep: string }>()
+
+  useEffect(() => {
+    setOffers(userData.offers)
+  }, [])
 
   useEffect(() => {
     async function fetchCEP () {
@@ -34,6 +41,17 @@ export function Offers () {
     fetchCEP()
   }, [cepNumber])
 
+  const onSelected = (id: number) => (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+
+    setOffers((offers) => {
+      return offers?.map((offer) => ({
+        ...offer,
+        isSelected: offer.id === id,
+      }))
+    })
+  }
+
   const handleClick = () => history.push('/')
 
   const address = `${cep?.logradouro}, ${cep?.bairro}, ${cep?.localidade}, ${cep?.uf}`
@@ -50,9 +68,9 @@ export function Offers () {
 
             <S.SectionOffers>
               <S.ListOffers>
-                {offersMock.map(({ velocity, price }, id) => (
-                  <S.ItemOffer key={`${id}-${velocity}`}>
-                    <CardOffer velocity={velocity} price={price} />
+                {offers?.map(({ id, name, ...rest }) => (
+                  <S.ItemOffer key={`${id}-${name}`}>
+                    <CardOffer id={id} name={name} {...rest} onSelected={onSelected} />
                   </S.ItemOffer>
                 ))}
               </S.ListOffers>
