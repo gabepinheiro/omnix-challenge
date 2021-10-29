@@ -21,7 +21,7 @@ export function Offers () {
     async function fetchCEP () {
       const cep = await getCEP(cepNumber)
 
-      if (cep instanceof Error) {
+      if ('error' in cep) {
         setError(true)
         setLoading(false)
         return

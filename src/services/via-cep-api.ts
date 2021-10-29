@@ -14,6 +14,15 @@ export type CEPProps = {
 export const getCEP = (cep: string) => {
   return fetch(`https://viacep.com.br/ws/${cep}/json/`)
     .then(response => response.json())
-    .then<CEPProps>(result => result)
-    .catch(() => new Error('CEP não encontrado'))
+    .then<CEPProps>(result => {
+      if (result.erro) {
+        return {
+          error: true,
+          message: 'CEP não encontrado',
+        }
+      }
+
+      return result
+    })
+    .catch(error => ({ error: true, message: error.message }))
 }
