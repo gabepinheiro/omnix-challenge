@@ -35,9 +35,11 @@ export function Home () {
               id='cep'
               name='cep'
               type='text'
-              title='Digite seu CEP'
+              title='Informe o CEP somente com os números'
               placeholder='Digite seu CEP'
               required
+              pattern='[0-9]{8}'
+              maxLength={8}
             />
           </S.FormGroup>
 

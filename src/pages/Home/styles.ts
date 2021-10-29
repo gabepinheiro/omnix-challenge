@@ -24,8 +24,8 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   border: 0;
-  padding: 1rem 1rem 1.4rem;
-  border-bottom: 1px solid var(--color-primary);
+  padding: 1rem 1rem 1.2rem;
+  border-bottom: 2px solid var(--color-primary);
 
   outline: none;
 
@@ -44,6 +44,13 @@ export const Input = styled.input`
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
   }
 
+  &:focus:invalid {
+    border-bottom: 2px solid red;
+  }
+
+  &:focus:valid {
+    border-bottom: 2px solid green;
+  }
 `
 
 export const FormGroup = styled.div`
