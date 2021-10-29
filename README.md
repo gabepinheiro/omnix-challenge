@@ -49,10 +49,15 @@ Você pode começar a editar a página modificando `pages/Home/index.tsx`. A pá
 - `dev`: runs your application on `localhost:3000`
 - `build`: creates the production build version
 - `start`: starts a simple server with the build production code
-- `lint`: runs the linter in all components and pages
+- `lint`: runs the linter in all components and
+- `lint:fix`: runs the linter to fix problems in all components.
+- `type-check`: runs the typescript to type check in all components.
+- `prepare`: install Husky.
 
 ## 🛠 Tecnologias utilizadas.
 
 - [React.js](https://pt-br.reactjs.org/)
 - [Styled-components](https://styled-components.com/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Eslint](https://eslint.org/)
+- [Husky](https://github.com/typicode/husky)
