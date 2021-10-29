@@ -4,6 +4,8 @@
 
 Desafio técnico da [Omnix Digital Experience](https://omnixperience.com.br/) com a proposta de desenvolver parte de uma landing page com foco na venda de planos de internet, consumindo a API [ViaCep](https://viacep.com.br/) para obter os dados do endereço ao consultar o CEP.
 
+Deploy: https://omnixfiber-gabe.netlify.app/
+
 ## 🚀 Como executar o projeto
 
 ### Pré-requisitos
