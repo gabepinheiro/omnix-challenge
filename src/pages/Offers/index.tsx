@@ -1,56 +1,17 @@
-import { useEffect, useState, MouseEvent } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
 import { Container } from 'ui/Container'
 import { Button } from 'ui/Button'
-import { CardOffer, OfferProps } from './CardOffer'
-
+import { CardOffer } from './CardOffer'
 import * as S from './styles'
 
-// import { offersMock } from './mock'
-import { userData } from 'resources/data.json'
-
-import { CEPProps, getCEP } from 'services/via-cep-api'
+import { useHistory } from 'react-router-dom'
+import { useCEP } from 'resources/hooks/use-cep'
+import { useOffers } from 'resources/hooks/use-offers'
 
 export function Offers () {
-  const [offers, setOffers] = useState<Omit<OfferProps, 'onSelected'>[]>()
-  const [cep, setCep] = useState<CEPProps>()
-  const [error, setError] = useState(false)
-  const [loading, setLoading] = useState(true)
+  const { cep, error, loading } = useCEP()
+  const { offers, onSelected } = useOffers()
 
   const history = useHistory()
-  const { cep: cepNumber } = useParams<{ cep: string }>()
-
-  useEffect(() => {
-    setOffers(userData.offers)
-  }, [])
-
-  useEffect(() => {
-    async function fetchCEP () {
-      const cep = await getCEP(cepNumber)
-
-      if ('error' in cep) {
-        setError(true)
-        setLoading(false)
-        return
-      }
-
-      setCep(cep)
-      setLoading(false)
-    }
-
-    fetchCEP()
-  }, [cepNumber])
-
-  const onSelected = (id: number) => (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-
-    setOffers((offers) => {
-      return offers?.map((offer) => ({
-        ...offer,
-        isSelected: offer.id === id,
-      }))
-    })
-  }
 
   const handleClick = () => history.push('/')
 
