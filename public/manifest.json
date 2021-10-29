@@ -1,11 +1,11 @@
 {
-  "short_name": "Omnix Challenge",
-  "name": "Omnix Challenge",
+  "short_name": "OmnixFiber",
+  "name": "OmnixFiber",
   "icons": [
 
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#222E50",
   "background_color": "#ffffff"
 }
