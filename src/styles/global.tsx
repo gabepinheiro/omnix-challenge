@@ -22,6 +22,14 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     overflow-x: hidden;
+
+    @media (max-width: 48em) { // 768px
+      font-size: 50% // 1rem = 8px
+    }
+
+    @media (max-width: 23.4375em) { // 375px
+      font-size: 43%; // 1rem = 7px
+    }
   }
 
   body {
