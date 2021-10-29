@@ -15,7 +15,7 @@ export function Offers () {
   const [loading, setLoading] = useState(true)
 
   const history = useHistory()
-  const { cep: cepNumber } = useParams<{cep: string}>()
+  const { cep: cepNumber } = useParams<{ cep: string }>()
 
   useEffect(() => {
     async function fetchCEP () {
@@ -36,15 +36,14 @@ export function Offers () {
 
   const handleClick = () => history.push('/')
 
-  const address =
-   `${cep?.logradouro}, ${cep?.bairro}, ${cep?.localidade}, ${cep?.uf}`
+  const address = `${cep?.logradouro}, ${cep?.bairro}, ${cep?.localidade}, ${cep?.uf}`
 
   return (
     <S.Wrapper>
       <Container>
         {loading && <S.Title>Loading...</S.Title>}
         {error && <S.Title>CEP não encontrado</S.Title>}
-        {!!cep &&
+        {!!cep && (
           <>
             <S.Title>Endereço</S.Title>
             <S.SubTitle>{address}</S.SubTitle>
@@ -58,7 +57,8 @@ export function Offers () {
                 ))}
               </S.ListOffers>
             </S.SectionOffers>
-          </>}
+          </>
+        )}
         <S.ButtonWrapper>
           <Button onClick={handleClick}>Ops, errei meu cep!</Button>
         </S.ButtonWrapper>
