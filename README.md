@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# OmnixChallenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💻 Sobre o projeto
 
-## Available Scripts
+Desafio técnico da [Omnix Digital Experience](https://omnixperience.com.br/) com a proposta de desenvolver parte de uma landing page com foco na venda de planos de internet, consumindo a API [ViaCep](https://viacep.com.br/) para obter os dados do endereço ao consultar o CEP.
 
-In the project directory, you can run:
+## 🚀 Como executar o projeto
 
-### `yarn start`
+### Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/). Após ter instalado as ferramentas básicas, você vai precisar criar e configurar algumas coisas a seguir:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Primeiro abra o seu terminal e rode o seguinte comando para fazer o download do projeto em sua máquina:
 
-### `yarn test`
+```bash
+# Clone este repositório
+$ git clone https://github.com/gabepinheiro/omnix-challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Acesse a pasta do projeto no terminal/cmd
+$ cd omnix-challenge
+```
 
-### `yarn build`
+Rode o seguinte comando para instalar todas as dependências necessárias do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+# or
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Com tudo pronto, você pode iniciar o aplicativo com:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-### `yarn eject`
+Abrir [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Você pode começar a editar a página modificando `pages/Home/index.tsx`. A página é atualizada automaticamente conforme você edita o arquivo.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Commands
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `dev`: runs your application on `localhost:3000`
+- `build`: creates the production build version
+- `start`: starts a simple server with the build production code
+- `lint`: runs the linter in all components and pages
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🛠 Tecnologias utilizadas.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React.js](https://pt-br.reactjs.org/)
+- [Styled-components](https://styled-components.com/)
+- [TypeScript](https://www.typescriptlang.org/)
