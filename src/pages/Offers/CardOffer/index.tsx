@@ -1,6 +1,8 @@
 import { WifiOutline as WifiIcon } from '@styled-icons/evaicons-outline'
 import { Button } from 'ui/Button'
 
+import { getCurrencyFormatted } from 'resources/utils/getCurrencyFormatted'
+
 import * as S from './styles'
 
 export type CardOfferProps = {
@@ -16,7 +18,7 @@ export function CardOffer ({ velocity, price }: CardOfferProps) {
       </S.IconWrapper>
       <S.Title>{velocity} Mega</S.Title>
 
-      <S.Price>{price}</S.Price>
+      <S.Price>{getCurrencyFormatted(Number(price))}<span>/ mês</span></S.Price>
 
       <S.ButtonWrapper>
         <Button>Assine já</Button>

@@ -39,6 +39,10 @@ export const Price = styled.figcaption`
   font-weight: 700;
 
   margin-top: auto;
+
+  & > span {
+    font-size: 1.2rem;
+  }
 `
 
 export const ButtonWrapper = styled.div`
