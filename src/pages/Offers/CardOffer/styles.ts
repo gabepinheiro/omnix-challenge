@@ -33,7 +33,7 @@ export const IconWrapper = styled.div`
   margin-bottom: 2.4rem;
 `
 
-export const Price = styled.caption`
+export const Price = styled.figcaption`
   display: inline-block;
   font-size: 2.4rem;
   font-weight: 700;
