@@ -8,6 +8,7 @@ import { Header } from 'layout/Header'
 
 import { Home } from 'pages/Home'
 import { Offers } from 'pages/Offers'
+import { NotFound } from 'pages/NotFound'
 
 function App () {
   return (
@@ -17,6 +18,7 @@ function App () {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/ofertas/:cep' component={Offers} />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </>
