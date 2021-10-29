@@ -16,10 +16,7 @@ export const getCEP = (cep: string) => {
     .then(response => response.json())
     .then<CEPProps>(result => {
       if (result.erro) {
-        return {
-          error: true,
-          message: 'CEP não encontrado',
-        }
+        throw new Error('CEP não encontrado')
       }
 
       return result
